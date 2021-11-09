@@ -10,3 +10,9 @@
 .broj-vjezbi{
     font-weight: bold;
 }
+@media(max-width:510px)
+{
+    #vjezbelnk{
+        width: 475px;;
+    }   
+}
