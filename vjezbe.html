@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <title>Vježbe</title>
+</head>
+<body>
+    <nav id="meni" class="navbar navbar-dark bg-dark navbar-expand-sm justify-content-center">
+        <ul class="navbar-nav mr-sm-auto ">
+            <li class="nav-item text-center">
+                <a id="grupelnk" class="nav-link d-block" href="index.html">Grupe</a>
+            </li>
+            <li class="nav-item text-center">
+                <a id="vjezbelnk" class="nav-link d-block" href="vjezbe.html">Vježbe</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-12 col-md-4">
+                <div class="accordion" id="odabriVjezbe">
+                    <div class="card border-secondary">
+                      <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Vježba 1
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#odabirVjezbe">
+                        <div class="card-body text-secondary">
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 1</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 2</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 3</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 4</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card border-secondary">
+                      <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Vježba 2
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#odabirVjezbe">
+                        <div class="card-body text-secondary">
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 1</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 2</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 3</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 4</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card border-secondary">
+                      <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left collapsed text-dark"   type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Vježba 3
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#odabirVjezbe">
+                        <div class="card-body text-secondary">
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 1</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 2</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 3</button>
+                            <button type="button" class="btn btn-outline-dark my-2">Zadatak 4</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img src="public/img/stonks.jpg" class="img-fluid py-3" alt="Graf">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="public/img/stonks.jpg" class="img-fluid py-3" alt="Graf">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="public/img/stonks.jpg" class="img-fluid py-3" alt="Graf">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="public/img/stonks.jpg" class="img-fluid py-3" alt="Graf">
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
