@@ -8,26 +8,184 @@
         <script src="galen-report.js"></script>
         <script type="text/javascript">
 var REPORT_DATA = {
-  "testId" : "1-test-vjezbetest.gspec",
-  "name" : "test/Vjezbetest.gspec",
+  "testId" : "1-test-z3tabletandphone.gspec",
+  "name" : "test/z3TabletAndPhone.gspec",
   "report" : {
     "nodes" : [ {
       "name" : "Simple check",
       "status" : "info",
       "nodes" : [ {
-        "name" : "check  test/Vjezbetest.gspec --url http://localhost/z1.html --size 1024x768 --htmlreport izvjestaji",
+        "name" : "check  test/z3TabletAndPhone.gspec --url http://localhost/mojRepozitorij.html --size 500x768 --htmlreport izvjestaji",
         "status" : "info",
         "nodes" : [ {
-          "name" : "FileNotFoundException: test/Vjezbetest.gspec",
-          "status" : "error",
-          "time" : 1636836318547,
-          "stacktrace" : "java.io.FileNotFoundException: test/Vjezbetest.gspec\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:43)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:68)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:59)\r\n\tat com.galenframework.suite.actions.GalenPageActionCheck.execute(GalenPageActionCheck.java:52)\r\n\tat com.galenframework.runner.GalenPageRunner.executeAction(GalenPageRunner.java:84)\r\n\tat com.galenframework.runner.GalenPageRunner.run(GalenPageRunner.java:76)\r\n\tat com.galenframework.runner.GalenBasicTestRunner.runTest(GalenBasicTestRunner.java:76)\r\n\tat com.galenframework.tests.GalenBasicTest.execute(GalenBasicTest.java:55)\r\n\tat com.galenframework.TestRunnable.runTest(TestRunnable.java:75)\r\n\tat com.galenframework.TestRunnable.run(TestRunnable.java:101)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n",
-          "type" : "node"
+          "name" : "Check layout: test/z3TabletAndPhone.gspec included tags: ",
+          "status" : "info",
+          "time" : 1636837737223,
+          "sections" : [ {
+            "name" : "Inside section",
+            "place" : {
+              "filePath" : "test/z3TabletAndPhone.gspec",
+              "lineNumber" : 16
+            },
+            "objects" : [ {
+              "name" : "urlRepozitorija",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "test/z3TabletAndPhone.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside postaviRepozitorij",
+                "meta" : [ ],
+                "highlight" : [ "urlRepozitorija", "postaviRepozitorij" ]
+              } ]
+            }, {
+              "name" : "akademskaGodina",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "test/z3TabletAndPhone.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "inside postaviRepozitorij",
+                "meta" : [ ],
+                "highlight" : [ "akademskaGodina", "postaviRepozitorij" ]
+              } ]
+            }, {
+              "name" : "imenovanjeBrancheva",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "test/z3TabletAndPhone.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "inside postaviRepozitorij",
+                "meta" : [ ],
+                "highlight" : [ "imenovanjeBrancheva", "postaviRepozitorij" ]
+              } ]
+            }, {
+              "name" : "submitDugme",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "test/z3TabletAndPhone.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "inside postaviRepozitorij",
+                "meta" : [ ],
+                "highlight" : [ "submitDugme", "postaviRepozitorij" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Above section",
+            "place" : {
+              "filePath" : "test/z3TabletAndPhone.gspec",
+              "lineNumber" : 30
+            },
+            "objects" : [ {
+              "name" : "labela1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "test/z3TabletAndPhone.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "above urlRepozitorija",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "urlRepozitorija",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela1", "urlRepozitorija" ]
+              } ]
+            }, {
+              "name" : "labela2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "test/z3TabletAndPhone.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "above akademskaGodina",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "akademskaGodina",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela2", "akademskaGodina" ]
+              } ]
+            }, {
+              "name" : "labela3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "test/z3TabletAndPhone.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "above imenovanjeBrancheva",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "imenovanjeBrancheva",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela3", "imenovanjeBrancheva" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "postaviRepozitorij" : {
+              "area" : [ 56, 86, 388, 314 ]
+            },
+            "submitDugme" : {
+              "area" : [ 373, 362, 70, 38 ]
+            },
+            "imenovanjeBrancheva" : {
+              "area" : [ 56, 308, 388, 38 ]
+            },
+            "urlRepozitorija" : {
+              "area" : [ 56, 124, 388, 38 ]
+            },
+            "labela3" : {
+              "area" : [ 41, 270, 418, 38 ]
+            },
+            "labela2" : {
+              "area" : [ 41, 178, 418, 38 ]
+            },
+            "akademskaGodina" : {
+              "area" : [ 56, 216, 388, 38 ]
+            },
+            "labela1" : {
+              "area" : [ 41, 86, 418, 38 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
         } ],
-        "time" : 1636836318524,
+        "time" : 1636837735225,
         "type" : "node"
       } ],
-      "time" : 1636836314788,
+      "time" : 1636837731721,
       "type" : "node"
     } ]
   }

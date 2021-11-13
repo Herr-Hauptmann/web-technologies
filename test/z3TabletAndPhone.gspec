@@ -1,0 +1,41 @@
+@objects
+	body body
+	postaviRepozitorij #postaviRepozitorij
+	submitDugme #submitDugme
+	urlRepozitorija #urlRepozitorija
+	akademskaGodina #akademskaGodina
+	imenovanjeBrancheva #imenovanjeBrancheva
+	labela1 #labela1
+	labela2 #labela2
+	labela3 #labela3
+
+= Width section =
+
+= Height section =
+
+= Inside section =
+	urlRepozitorija:
+		inside postaviRepozitorij
+	akademskaGodina:
+		inside postaviRepozitorij
+	imenovanjeBrancheva:
+		inside postaviRepozitorij
+	submitDugme:
+		inside postaviRepozitorij
+	
+= Left of section =
+
+= Right of section =
+
+= Above section =
+	labela1:
+		above urlRepozitorija
+	labela2:
+		above akademskaGodina
+	labela3:
+		above imenovanjeBrancheva
+= Below section =
+
+= Visible section =
+
+= Inside partly section =

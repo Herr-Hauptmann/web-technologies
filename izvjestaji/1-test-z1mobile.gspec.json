@@ -6,12 +6,12 @@
       "name" : "Simple check",
       "status" : "info",
       "nodes" : [ {
-        "name" : "check  test/z1Mobile.gspec --url http://localhost/z1.html --size 450x768 --htmlreport izvjestaji",
+        "name" : "check  test/z1Mobile.gspec --url http://localhost/z1.html --size 500x768 --htmlreport izvjestaji",
         "status" : "info",
         "nodes" : [ {
           "name" : "Check layout: test/z1Mobile.gspec included tags: ",
           "status" : "info",
-          "time" : 1636836473903,
+          "time" : 1636837631647,
           "sections" : [ {
             "name" : "Width section",
             "place" : {
@@ -604,10 +604,10 @@
           "screenshot" : "layout-1-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1636836471008,
+        "time" : 1636837628721,
         "type" : "node"
       } ],
-      "time" : 1636836467561,
+      "time" : 1636837625228,
       "type" : "node"
     } ]
   }

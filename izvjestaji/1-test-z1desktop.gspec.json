@@ -11,7 +11,7 @@
         "nodes" : [ {
           "name" : "Check layout: test/z1Desktop.gspec included tags: ",
           "status" : "info",
-          "time" : 1636836399455,
+          "time" : 1636837587723,
           "sections" : [ {
             "name" : "Width section",
             "place" : {
@@ -489,10 +489,10 @@
           "screenshot" : "layout-1-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1636836396590,
+        "time" : 1636837585043,
         "type" : "node"
       } ],
-      "time" : 1636836393060,
+      "time" : 1636837581495,
       "type" : "node"
     } ]
   }
