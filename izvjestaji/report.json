@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "test/z1Mobile.gspec",
+    "startedAt" : 1636836467557,
+    "endedAt" : 1636836475310,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 27,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 27
+    },
+    "testId" : "1-test-z1mobile.gspec",
+    "duration" : 7753,
+    "failed" : false
+  } ]
+}
