@@ -25,9 +25,3 @@ let Tabela = (function () {
         crtaj: crtaj
     }
  }());
- 
- //Tabela.crtaj(3,3)
- //i=0 ⍉⍉⍉
- //i=1 ⎕⍉⍉
- //i=2 ⎕⎕⍉  
- //Tabela.crtaj(8, 8);

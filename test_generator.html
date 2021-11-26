@@ -12,7 +12,6 @@
                 width: 20px;
             }
         </style>
-        <script src="public/js/z21.js"></script>
     </head>
     <body>
         <div id="ispis"></div>
@@ -22,7 +21,7 @@
         <script src="https://unpkg.com/mocha/mocha.js"></script>
 
         <script class="mocha-init">
-            // mocha.reporter("json");
+            mocha.reporter("json");
             mocha.setup("bdd");
             mocha.checkLeaks();
         </script>

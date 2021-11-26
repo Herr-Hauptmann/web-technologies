@@ -1,0 +1,152 @@
+{
+    "stats": {
+      "suites": 2,
+      "tests": 5,
+      "passes": 0,
+      "pending": 0,
+      "failures": 5,
+      "start": "2021-11-26T22:24:22.147Z",
+      "end": "2021-11-26T22:24:22.161Z",
+      "duration": 14
+    },
+    "tests": [
+      {
+        "title": "should draw 3 rows when parameter are 2,3",
+        "fullTitle": "Tabela crtaj() should draw 3 rows when parameter are 2,3",
+        "file": null,
+        "duration": 1,
+        "currentRetry": 0,
+        "err": {
+          "message": "Broj redova treba biti 3: expected 1 to equal 3",
+          "showDiff": true,
+          "actual": "1",
+          "expected": "3",
+          "operator": "strictEqual",
+          "stack": "AssertionError: Broj redova treba biti 3: expected 1 to equal 3\n    at Context.<anonymous> (public/js/testovi.js:9:20)"
+        }
+      },
+      {
+        "title": "should draw 4 rows when parameter are 3,4",
+        "fullTitle": "Tabela crtaj() should draw 4 rows when parameter are 3,4",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "message": "Broj redova treba biti 4: expected 1 to equal 4",
+          "showDiff": true,
+          "actual": "1",
+          "expected": "4",
+          "operator": "strictEqual",
+          "stack": "AssertionError: Broj redova treba biti 4: expected 1 to equal 4\n    at Context.<anonymous> (public/js/testovi.js:16:20)"
+        }
+      },
+      {
+        "title": "should draw 5 rows when parameter are 4,5",
+        "fullTitle": "Tabela crtaj() should draw 5 rows when parameter are 4,5",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "message": "Broj redova treba biti 5: expected 1 to equal 5",
+          "showDiff": true,
+          "actual": "1",
+          "expected": "5",
+          "operator": "strictEqual",
+          "stack": "AssertionError: Broj redova treba biti 5: expected 1 to equal 5\n    at Context.<anonymous> (public/js/testovi.js:23:20)"
+        }
+      },
+      {
+        "title": "should draw 2 columns in row 2 when parameter are 2,3",
+        "fullTitle": "Tabela crtaj() should draw 2 columns in row 2 when parameter are 2,3",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "stack": "TypeError: Cannot read properties of undefined (reading 'getElementsByTagName')\n    at Context.<anonymous> (public/js/testovi.js:30:36)",
+          "message": "Cannot read properties of undefined (reading 'getElementsByTagName')"
+        }
+      },
+      {
+        "title": "should draw 3 columns in row 3 when parameter are 5,6",
+        "fullTitle": "Tabela crtaj() should draw 3 columns in row 3 when parameter are 5,6",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "stack": "TypeError: Cannot read properties of undefined (reading 'getElementsByTagName')\n    at Context.<anonymous> (public/js/testovi.js:43:36)",
+          "message": "Cannot read properties of undefined (reading 'getElementsByTagName')"
+        }
+      }
+    ],
+    "pending": [],
+    "failures": [
+      {
+        "title": "should draw 3 rows when parameter are 2,3",
+        "fullTitle": "Tabela crtaj() should draw 3 rows when parameter are 2,3",
+        "file": null,
+        "duration": 1,
+        "currentRetry": 0,
+        "err": {
+          "message": "Broj redova treba biti 3: expected 1 to equal 3",
+          "showDiff": true,
+          "actual": "1",
+          "expected": "3",
+          "operator": "strictEqual",
+          "stack": "AssertionError: Broj redova treba biti 3: expected 1 to equal 3\n    at Context.<anonymous> (public/js/testovi.js:9:20)"
+        }
+      },
+      {
+        "title": "should draw 4 rows when parameter are 3,4",
+        "fullTitle": "Tabela crtaj() should draw 4 rows when parameter are 3,4",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "message": "Broj redova treba biti 4: expected 1 to equal 4",
+          "showDiff": true,
+          "actual": "1",
+          "expected": "4",
+          "operator": "strictEqual",
+          "stack": "AssertionError: Broj redova treba biti 4: expected 1 to equal 4\n    at Context.<anonymous> (public/js/testovi.js:16:20)"
+        }
+      },
+      {
+        "title": "should draw 5 rows when parameter are 4,5",
+        "fullTitle": "Tabela crtaj() should draw 5 rows when parameter are 4,5",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "message": "Broj redova treba biti 5: expected 1 to equal 5",
+          "showDiff": true,
+          "actual": "1",
+          "expected": "5",
+          "operator": "strictEqual",
+          "stack": "AssertionError: Broj redova treba biti 5: expected 1 to equal 5\n    at Context.<anonymous> (public/js/testovi.js:23:20)"
+        }
+      },
+      {
+        "title": "should draw 2 columns in row 2 when parameter are 2,3",
+        "fullTitle": "Tabela crtaj() should draw 2 columns in row 2 when parameter are 2,3",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "stack": "TypeError: Cannot read properties of undefined (reading 'getElementsByTagName')\n    at Context.<anonymous> (public/js/testovi.js:30:36)",
+          "message": "Cannot read properties of undefined (reading 'getElementsByTagName')"
+        }
+      },
+      {
+        "title": "should draw 3 columns in row 3 when parameter are 5,6",
+        "fullTitle": "Tabela crtaj() should draw 3 columns in row 3 when parameter are 5,6",
+        "file": null,
+        "duration": 0,
+        "currentRetry": 0,
+        "err": {
+          "stack": "TypeError: Cannot read properties of undefined (reading 'getElementsByTagName')\n    at Context.<anonymous> (public/js/testovi.js:43:36)",
+          "message": "Cannot read properties of undefined (reading 'getElementsByTagName')"
+        }
+      }
+    ],
+    "passes": []
+}
