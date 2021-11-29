@@ -49,18 +49,25 @@ let TestoviParser=(function(){
             var rezultatTestiranja2 = ucitajJson(rezultat2);
         }
         catch{
-            return{"tacnost": `0%`, "greske": ["Testovi se ne mogu izvršiti"]};
+            return{"promjena": `0%`, "greske": ["Testovi se ne mogu izvršiti"]};
         }
         if (uporediTestove(rezultatTestiranja1.tests, rezultatTestiranja2.tests))
         {
             let povratni = dajTacnost(rezultat2);
-            povratni.greske.sort((a, b) => a.fullTitle.toLowerCase.localeCompare(b.fullTitle.toLowerCase));
-            return povratni;
+            povratni.greske.sort((a, b) => a.localeCompare(b));
+            return{"promjena": `${povratni.tacnost}`, "greske": povratni.greske};
         }
         //Ovdje mozemo pretpostaviti da testovi nisu isti
-        let greske = rezultatTestiranja1.failures;
-        greske.filter(test => pronadjiTest(test, rezultatTestiranja2.tests));
-        
+        let greske1 = rezultatTestiranja1.failures;
+        greske1.filter(test => pronadjiTest(test, rezultatTestiranja2.tests));
+        let greske2 = rezultatTestiranja2.failures;
+        if (greske1.length>1)
+            greske1.sort((a, b) => a.fullTitle.toLowerCase.localeCompare(b.fullTitle.toLowerCase));
+        if (greske2.length>1)
+            greske2.sort((a, b) => a.fullTitle.toLowerCase.localeCompare(b.fullTitle.toLowerCase));
+        let x = (greske1.length+greske2.length)/(greske1.length+rezultatTestiranja2.tests.length)*100;
+        greske1.concat(greske2);
+        return{"promjena": `${x}}%`, "greske": greske1};
     }
     
     return{
