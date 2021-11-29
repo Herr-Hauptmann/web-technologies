@@ -59,15 +59,17 @@ let TestoviParser=(function(){
         }
         //Ovdje mozemo pretpostaviti da testovi nisu isti
         let greske1 = rezultatTestiranja1.failures;
+        // console.log({"Greske 1 prije filtriranja" : greske1});
         greske1.filter(test => pronadjiTest(test, rezultatTestiranja2.tests));
+        // console.log({"Greske 1 poslije filtriranja" : greske1});
         let greske2 = rezultatTestiranja2.failures;
-        if (greske1.length>1)
-            greske1.sort((a, b) => a.fullTitle.toLowerCase.localeCompare(b.fullTitle.toLowerCase));
-        if (greske2.length>1)
-            greske2.sort((a, b) => a.fullTitle.toLowerCase.localeCompare(b.fullTitle.toLowerCase));
+        // console.log({"Greske 2 prije sortiranja" : greske2});
+        greske1.sort((a, b) => a.fullTitle.localeCompare(b.fullTitle));
+        greske2.sort((a, b) => a.fullTitle.localeCompare(b.fullTitle));
         let x = (greske1.length+greske2.length)/(greske1.length+rezultatTestiranja2.tests.length)*100;
-        greske1.concat(greske2);
-        return{"promjena": `${x}}%`, "greske": greske1};
+        x = Math.round(x*10)/10;
+        let sveGreske = Array.from(greske1.concat(greske2), x => x.fullTitle);
+        return{"promjena": `${x}%`, "greske": sveGreske};
     }
     
     return{
