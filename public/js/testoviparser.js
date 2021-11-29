@@ -57,6 +57,10 @@ let TestoviParser=(function(){
             povratni.greske.sort((a, b) => a.fullTitle.toLowerCase.localeCompare(b.fullTitle.toLowerCase));
             return povratni;
         }
+        //Ovdje mozemo pretpostaviti da testovi nisu isti
+        let greske = rezultatTestiranja1.failures;
+        greske.filter(test => pronadjiTest(test, rezultatTestiranja2.tests));
+        
     }
     
     return{
