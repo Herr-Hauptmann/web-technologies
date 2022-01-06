@@ -1,0 +1,20 @@
+{
+  "name": "projekat",
+  "version": "1.0.0",
+  "description": "WT 2021/2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Herr-Hauptmann@bitbucket.org/Herr-Hauptmann/wt21p18541.git"
+  },
+  "author": "Tarik Horozovic",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Herr-Hauptmann/wt21p18541#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}
