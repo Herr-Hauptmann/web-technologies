@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/sirotinjski.css">
+    <title>Repozitorij</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card mt-3">
+            <div class="card-header">Postavi repozitorij</div>
+            <div class="card-body card-text">
+                <form id="postaviRepozitorij">    
+                    <div class="form-group row">
+                      <label id="labela1" for="urlRepozitorija" class="col-md-3 col-form-label">URL Repozitorija</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" id="urlRepozitorija">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label id="labela2" for="akademskaGodina" class="col-md-3 col-form-label">Akademska godina</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" id="akademskaGodina">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label id="labela3" for="imenovanjeBrancheva" class="col-md-3 col-form-label">Imenovanje branch-eva</label>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" id="imenovanjeBrancheva">
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button id="submitDugme" type="submit" class="btn btn-secondary">Pošalji</button>
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
