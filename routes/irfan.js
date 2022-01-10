@@ -21,4 +21,9 @@ router.get('/mojRepozitorij.html', (req,res,next) =>{
     res.render('mojRepozitorij')
 });
 
+router.get('/unosVjezbi.html', (req,res,next)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.render('unosVjezbi');
+});
+
 module.exports = router;
