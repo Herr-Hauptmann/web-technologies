@@ -73,6 +73,7 @@ let VjezbeAjax = (function(){
             div.classList.add("card");
             div.classList.add("border-secondary");
             div.appendChild(iscrtajNaslovVjezbe(i+1));
+            div.addEventListener('click', ()=>{iscrtajZadatke(div, objekat.brojZadataka)});
             divDOMelement.appendChild(div);
         }
     };
@@ -112,14 +113,6 @@ let VjezbeAjax = (function(){
         
         h2.appendChild(button);
         div.appendChild(h2);
-        // <div class="card-header" id="headingOne">
-        //     <h2 class="mb-0">
-        //         <button class="btn btn-link btn-block text-left " type="button" 
-        //         data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        //         Vježba 1
-        //         </button>
-        //     </h2>
-        // </div>
         return div;
     }
 
