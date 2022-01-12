@@ -38,7 +38,8 @@ let VjezbeAjax = (function(){
                 {
                     callbackFja(rezultat.data, null);
                 }
-                callbackFja(null, rezultat);
+                else
+                    callbackFja(null, rezultat);
             }
             else if (ajax.readyState == 4)
                 callbackFja(ajax.statusText,null);
@@ -58,7 +59,8 @@ let VjezbeAjax = (function(){
                 {
                     callbackFja(rezultat.data, null);
                 }
-                callbackFja(null, rezultat);
+                else
+                    callbackFja(null, rezultat);
             }
             else if (ajax.readyState == 4)
                 callbackFja(ajax.statusText,null);
