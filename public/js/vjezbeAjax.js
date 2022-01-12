@@ -47,7 +47,7 @@ let VjezbeAjax = (function(){
                 callbackFja(ajax.statusText,null);
         }
 
-        ajax.send();
+        ajax.send(JSON.stringify(vjezbeObjekat));
     }
 
     let dohvatiPodatke = function(callbackFja){
