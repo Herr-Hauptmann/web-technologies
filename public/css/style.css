@@ -4,12 +4,17 @@
     text-decoration-thickness: 0.5px;
     text-underline-offset: 5px;
 }
+.nePrikazuj{
+    display: none !important;;
+}
+
 .table{
     border-radius: 5px;
 }
 .broj-vjezbi{
     font-weight: bold;
 }
+
 @media(max-width:510px)
 {
     #vjezbelnk{

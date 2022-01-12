@@ -70,23 +70,48 @@ let VjezbeAjax = (function(){
         for (let i = 0; i < objekat.brojVjezbi; i++)
         {
             let div = document.createElement('div');
+            div.id=`vjezba${i}`;
             div.classList.add("card");
             div.classList.add("border-secondary");
-            div.appendChild(iscrtajNaslovVjezbe(i+1));
-            div.addEventListener('click', ()=>{iscrtajZadatke(div, objekat.brojZadataka)});
+            let naslov = iscrtajNaslovVjezbe(i+1);
+            naslov.addEventListener('click', ()=>{iscrtajZadatke(div, objekat.brojZadataka[i])});
+            div.appendChild(naslov);
             divDOMelement.appendChild(div);
         }
     };
 
     iscrtajZadatke = function(vjezbaDOMelement,brojZadataka){
-        // <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#odabirVjezbe">
-        //                 <div class="card-body text-secondary">
-        //                     <button type="button" class="btn btn-outline-dark my-2">Zadatak 1</button>
-        //                     <button type="button" class="btn btn-outline-dark my-2">Zadatak 2</button>
-        //                     <button type="button" class="btn btn-outline-dark my-2">Zadatak 3</button>
-        //                     <button type="button" class="btn btn-outline-dark my-2">Zadatak 4</button>
-        //                 </div>
-        //               </div>
+        let vjezbe = vjezbaDOMelement.getElementsByClassName('collapse');
+        if (vjezbe.length != 0)
+        {
+            if (vjezbe[0].classList.toggle('nePrikazuj'))
+                vjezbe[0].classList.add('nePrikazuj');
+            return;
+        }
+
+        let zadaci = document.createElement("div");
+        zadaci.id = `collapse${vjezbaDOMelement.id[6]}`;
+        zadaci.classList.add("collapse");
+        zadaci.classList.add("show");
+
+        let div = document.createElement("div");
+        div.classList.add("card-body");
+        div.classList.add("text-secondary");
+
+        for (let i = 0; i < brojZadataka;i++)
+        {
+            let zadatak = document.createElement('button');
+            zadatak.type = "button";
+            zadatak.classList.add("btn");
+            zadatak.classList.add("btn-outline-dark");
+            zadatak.classList.add("mx-1");
+            zadatak.classList.add('my-2');
+            zadatak.innerHTML = `Zadatak ${i+1}`;
+            div.appendChild(zadatak);
+        }
+
+        zadaci.appendChild(div);
+        vjezbaDOMelement.appendChild(zadaci);
     };
 
     iscrtajNaslovVjezbe = function(brojVjezbe){
@@ -97,7 +122,6 @@ let VjezbeAjax = (function(){
         h2 = document.createElement("h2");
         h2.classList.add('mb-0');
         
-        
         button = document.createElement('button');
         button.classList.add('btn');
         button.classList.add('btn-link');
@@ -105,10 +129,6 @@ let VjezbeAjax = (function(){
         button.classList.add('text-dark');
         button.classList.add('text-left');
         button.type = "button";
-        button.dataset.toggle="collapse";
-        button.dataset.target=`#collapse${brojVjezbe}`;
-        button.setAttribute("aria-expanded", "true");
-        button.setAttribute('aria-controls', `collapse${brojVjezbe}`);
         button.innerHTML = `Vježba ${brojVjezbe}`;
         
         h2.appendChild(button);
