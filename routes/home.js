@@ -14,10 +14,10 @@ router.get('/', (req, res, next) =>{
 
 router.get('/vjezbe', (req, res, next)=>{
     let podaci = fs.readFileSync('public/vjezbe.csv','utf-8').split(',');
-    let odgovor = {brojVjezbi: podaci[0], brojZadataka:[]};
+    let odgovor = {brojVjezbi: parseInt(podaci[0]), brojZadataka:[]};
     for (let i = 1; i <= odgovor.brojVjezbi; i++)
     {
-        odgovor.brojZadataka.push(podaci[i]);
+        odgovor.brojZadataka.push(parseInt(podaci[i]));
     }
     res.setHeader('content-type', 'application/json');
     res.write(JSON.stringify(odgovor));
