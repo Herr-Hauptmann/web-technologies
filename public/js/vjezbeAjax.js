@@ -14,7 +14,7 @@ let VjezbeAjax = (function(){
             input.type = "number";
             input.name = "z" + i;
             input.min = 0;
-            input.max = 4;
+            input.max = 10;
             input.classList.add('form-control');
             input.classList.add('col-md-3');
             input.classList.add('mt-2');
