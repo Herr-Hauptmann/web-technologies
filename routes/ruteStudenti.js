@@ -49,7 +49,7 @@ router.put('/student/:index', jsonParser, async(req,res)=>{
     const index = req.params.index;
     const provjeraIndeksa = await Student.count({where: {index: index}});
     if (!provjeraIndeksa)
-        return res.json({status: `Student sa indexom ${index} ne postoji!`});
+        return res.end(JSON.stringify({status: `Student sa indexom ${index} ne postoji!`}));
     
         const imeGrupe = req.body.grupa;
     const grupaStudenta = await Grupa.findOrCreate({where: {naziv: imeGrupe}});
@@ -61,7 +61,7 @@ router.put('/student/:index', jsonParser, async(req,res)=>{
         }
       });
       
-    return res.json({status:`Promjenjena grupa studentu ${index}`});
+    return res.end(JSON.stringify({status:`Promjenjena grupa studentu ${index}`}));
 });
 
 router.post('/batch/student', textParser, async(req,res)=>{
@@ -86,7 +86,7 @@ router.post('/batch/student', textParser, async(req,res)=>{
         const novi = await Student.create({firstname, lastname, index, groupId});   
     }
     if (postojeciIndexi.length==0)
-        return res.json({status: `Dodano ${studenti.length} studenata!`});
+        return res.end(JSON.stringify({status: `Dodano ${studenti.length} studenata!`}));
     else
     {
         let povratniString = `Dodano ${studenti.length-postojeciIndexi.length} studenata, a studenti `;
@@ -97,7 +97,7 @@ router.post('/batch/student', textParser, async(req,res)=>{
                 povratniString+=',';    
         }
         povratniString+=" već postoje!";
-        return res.json({status: povratniString});
+        return res.end(JSON.stringify({status: povratniString}));
     }
 });
 
