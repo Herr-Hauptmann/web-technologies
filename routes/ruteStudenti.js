@@ -31,8 +31,9 @@ router.post('/student', jsonParser, async(req,res)=>{
         const index = req.body.index;
         const imeGrupe = req.body.grupa;
         const provjeraIndeksa = await Student.count({where: {index: index}});
-        if (provjeraIndeksa)
+        if (provjeraIndeksa){
             res.end(JSON.stringify({"status": `Student sa indexom ${index} već postoji!`}));
+        }
         let grupaStudenta = await Grupa.findOrCreate({where: {naziv: imeGrupe}});
         const groupId = grupaStudenta[0].id;
         const student = await Student.create({firstname, lastname, index, groupId});

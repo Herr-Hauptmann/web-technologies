@@ -20,3 +20,5 @@ app.listen({port:3000}, async() =>{
     await sequelize.authenticate();
     console.log("Database connected!");
 });
+
+module.exports = app;
