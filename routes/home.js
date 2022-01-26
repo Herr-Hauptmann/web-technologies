@@ -14,13 +14,19 @@ router.get('/', (req, res, next) =>{
     res.render('z1')
 });
 
-router.get('/vjezbe', (req, res, next)=>{
-    let podaci = fs.readFileSync('public/vjezbe.csv','utf-8').split(',');
-    let odgovor = {brojVjezbi: parseInt(podaci[0]), brojZadataka:[]};
-    for (let i = 1; i <= odgovor.brojVjezbi; i++)
+router.get('/vjezbe', async(req, res, next)=>{
+    const vjezbe = await Vjezba.findAll();
+    let odgovor = {brojVjezbi: await Vjezba.count(), brojZadataka:[]};
+    for (let i = 0; i < odgovor.brojVjezbi; i++)
     {
-        odgovor.brojZadataka.push(parseInt(podaci[i]));
+        odgovor.brojZadataka.push(await Zadatak.count({where:{vjezbaId: vjezbe[i].id}}));
     }
+    
+    // let podaci = fs.readFileSync('public/vjezbe.csv','utf-8').split(',');
+    // for (let i = 1; i <= odgovor.brojVjezbi; i++)
+    // {
+    //     odgovor.brojZadataka.push(parseInt(podaci[i]));
+    // }
     res.setHeader('content-type', 'application/json');
     res.write(JSON.stringify(odgovor));
     res.end();
