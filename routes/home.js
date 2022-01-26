@@ -63,6 +63,7 @@ router.post('/vjezbe', jsonParser, async(req, res, next)=>{
         return;
     }
     
+    //JAKO JE BITNO DA NESTO POSTOJI U BAZI INACE NAREDNI DIO KODA RUSI APLIKACIJU
     await Vjezba.destroy({
         truncate: true
     });
