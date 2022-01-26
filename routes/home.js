@@ -21,11 +21,13 @@ router.get('/vjezbe', async(req, res, next)=>{
     {
         odgovor.brojZadataka.push(await Zadatak.count({where:{vjezbaId: vjezbe[i].id}}));
     }
-    let podaci = fs.readFileSync('public/vjezbe.csv','utf-8').split(',');
-    for (let i = 1; i <= odgovor.brojVjezbi; i++)
-    {
-        odgovor.brojZadataka.push(parseInt(podaci[i]));
-    }
+    
+    // let podaci = fs.readFileSync('public/vjezbe.csv','utf-8').split(',');
+    // for (let i = 1; i <= odgovor.brojVjezbi; i++)
+    // {
+    //     odgovor.brojZadataka.push(parseInt(podaci[i]));
+    // }
+    
     res.setHeader('content-type', 'application/json');
     res.write(JSON.stringify(odgovor));
     res.end();
