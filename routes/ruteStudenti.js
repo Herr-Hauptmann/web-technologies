@@ -1,32 +1,36 @@
 const express= require('express')
 const router = express.Router();
-const fs = require('fs');
 const bodyParser = require('body-parser');
-const { fileURLToPath } = require('url');
-const { userInfo } = require('os');
 
 var jsonParser = bodyParser.json();
 var textParser = bodyParser.text();
 
 const {sequelize, Student, Grupa} = require('../models')
 
+
+router.get('/student', (req,res,next) =>{
+    res.setHeader('Content-Type', 'text/html');
+    res.render('unosStudenata');
+});
+
+
 router.post('/student', jsonParser, async(req,res)=>{
     try{
         const firstname = req.body.ime;
         const lastname = req.body.prezime;
-        const index = req.body.indeks;
+        const index = req.body.index;
         const imeGrupe = req.body.grupa;
         const provjeraIndeksa = await Student.count({where: {index: index}});
         if (provjeraIndeksa)
-            return res.json({status: `Student sa indexom ${index} već postoji!`});
+            res.end(JSON.stringify({"status": `Student sa indexom ${index} već postoji!`}));
         let grupaStudenta = await Grupa.findOrCreate({where: {naziv: imeGrupe}});
         const groupId = grupaStudenta[0].id;
         const student = await Student.create({firstname, lastname, index, groupId});
-        return res.json({status:'Kreiran student!'});
+        res.end(JSON.stringify({"status":'Kreiran student!'}));
     }catch(err)
     {
         console.log(err);
-        return res.status(500).json(err);
+        res.end(JSON.stringify({"status": `Student sa indexom već postoji!`}))
     }
 });
 
