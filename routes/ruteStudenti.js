@@ -40,5 +40,24 @@ router.get('/studenti', async(req, res)=>{
     }
 });
 
+router.put('/student/:index', jsonParser, async(req,res)=>{
+    const index = req.params.index;
+    const provjeraIndeksa = await Student.count({where: {index: index}});
+    if (!provjeraIndeksa)
+        return res.json({status: `Student sa indexom ${index} ne postoji!`});
+    
+        const imeGrupe = req.body.grupa;
+    const grupaStudenta = await Grupa.findOrCreate({where: {naziv: imeGrupe}});
+    const noviGroupId = grupaStudenta[0].id;
+    
+    await Student.update({ groupId: noviGroupId}, {
+        where: {
+          index: index
+        }
+      });
+      
+    return res.json({status:`Promjenjena grupa studentu ${index}`});
+});
+
 
 module.exports = router;

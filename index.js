@@ -1,7 +1,7 @@
 const express = require('express');
 const rute = require('./routes/home');
 const ruteHTML = require('./routes/irfan');
-const ruteBaza = require('./routes/ruteBaza');
+const ruteStudenti = require('./routes/ruteStudenti');
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(rute);
 app.use(ruteHTML);
-app.use(ruteBaza);
+app.use(ruteStudenti);
 
 app.listen({port:3000}, async() =>{
     console.log("Server up!");
