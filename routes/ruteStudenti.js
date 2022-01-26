@@ -13,6 +13,11 @@ router.get('/student', (req,res,next) =>{
     res.render('unosStudenata');
 });
 
+router.get('/promjenaGrupe', (req,res,next) =>{
+    res.setHeader('Content-Type', 'text/html');
+    res.render('promjenaGrupe');
+});
+
 
 router.post('/student', jsonParser, async(req,res)=>{
     try{
