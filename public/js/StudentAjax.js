@@ -32,7 +32,18 @@ let StudentAjax = (function(){
     }
 
     let dodajBatch = function (csvStudenti,fnCallback){
-
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST",`http://localhost:3000/batch/student`,true);
+        ajax.setRequestHeader("Content-Type", "text/plain");
+        ajax.onreadystatechange = function() {
+            var rezultat = JSON.parse(ajax.responseText);
+            if (ajax.readyState == 4 && ajax.status == 200){
+                fnCallback(rezultat);
+            }
+            else if (ajax.readyState == 4)
+            fnCallback(rezultat);
+        }
+        ajax.send(JSON.stringify({csvStudenti}));
     }
     return{
         dodajStudenta: dodajStudenta,

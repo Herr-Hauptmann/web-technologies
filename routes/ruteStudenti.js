@@ -18,6 +18,11 @@ router.get('/promjenaGrupe', (req,res,next) =>{
     res.render('promjenaGrupe');
 });
 
+router.get('/CSVstudenti', (req,res,next) =>{
+    res.setHeader('Content-Type', 'text/html');
+    res.render('dodajStudenteCSV');
+});
+
 
 router.post('/student', jsonParser, async(req,res)=>{
     try{
