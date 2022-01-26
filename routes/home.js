@@ -7,6 +7,8 @@ const { fileURLToPath } = require('url');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var jsonParser = bodyParser.json(); 
 
+const {sequelize, Vjezba, Zadatak} = require('../models');
+
 router.get('/', (req, res, next) =>{
     res.setHeader('Content-Type', 'text/html');
     res.render('z1')
@@ -24,7 +26,7 @@ router.get('/vjezbe', (req, res, next)=>{
     res.end();
 });
 
-router.post('/vjezbe', jsonParser, (req, res, next)=>{
+router.post('/vjezbe', jsonParser, async(req, res, next)=>{
     res.setHeader('content-type', 'application/json');
     let greske = '';
     let string = `${req.body.brojVjezbi}`;
@@ -54,6 +56,24 @@ router.post('/vjezbe', jsonParser, (req, res, next)=>{
         return;
     }
     
+    await Vjezba.destroy({
+        truncate: true
+    });
+    await Zadatak.destroy({
+        truncate: true
+    });
+
+    for (i = 0; i < req.body.brojVjezbi; i++){
+        const naziv = `Vjezba ${i+1}`;
+        const vjezba = await Vjezba.create({naziv});
+        for(let j = 0; j < req.body.brojZadataka[i]; j++)
+        {
+            const naziv = `Zadatak ${j+1}`;
+            const vjezbaId = vjezba.id;
+            const zadatak = await Zadatak.create({naziv, vjezbaId});
+        }
+    }
+
     fs.truncateSync('public/vjezbe.csv');
     fs.writeFileSync('public/vjezbe.csv', string);
     res.write(JSON.stringify(req.body));
